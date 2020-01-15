@@ -102,7 +102,7 @@ RCT_EXPORT_METHOD(connectToProtectedSSID:(NSString*)ssid
 
     if (@available(iOS 11.0, *)) {
         NEHotspotConfiguration* configuration = [[NEHotspotConfiguration alloc] initWithSSID:ssid passphrase:passphrase isWEP:isWEP];
-        configuration.joinOnce = false://true; mod
+        configuration.joinOnce = false;//true; mod
 
         [[NEHotspotConfigurationManager sharedManager] applyConfiguration:configuration completionHandler:^(NSError * _Nullable error) {
             if (error != nil) {
